@@ -42,3 +42,34 @@ INFO 2024-06-17 00:53:15,909 basehttp 28924 18748 "GET /prefix/about/ HTTP/1.1" 
 INFO 2024-06-17 00:53:21,283 basehttp 28924 18748 "GET /prefix/ HTTP/1.1" 200 13
 INFO 2024-06-17 00:56:34,601 autoreload 28924 32784 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
 INFO 2024-06-17 00:56:35,172 autoreload 20352 22536 Watching for file changes with StatReloader
+INFO 2024-06-17 01:08:35,219 autoreload 32656 25008 Watching for file changes with StatReloader
+WARNING 2024-06-17 01:08:38,044 log 32656 27700 Not Found: /
+WARNING 2024-06-17 01:08:38,049 basehttp 32656 27700 "GET / HTTP/1.1" 404 2169
+INFO 2024-06-17 01:08:46,690 basehttp 32656 27700 "GET /prefix/about/ HTTP/1.1" 200 27
+INFO 2024-06-17 01:08:50,519 basehttp 32656 27700 "GET /prefix/ HTTP/1.1" 200 380
+INFO 2024-06-17 01:12:43,323 autoreload 32656 25008 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:12:43,938 autoreload 24736 1968 Watching for file changes with StatReloader
+INFO 2024-06-17 01:12:45,376 autoreload 24736 1968 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:12:45,892 autoreload 28736 21508 Watching for file changes with StatReloader
+INFO 2024-06-17 01:12:52,406 autoreload 28736 21508 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:12:52,975 autoreload 31368 25796 Watching for file changes with StatReloader
+INFO 2024-06-17 01:12:58,472 autoreload 31368 25796 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:12:59,029 autoreload 15296 28888 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:06,571 autoreload 15296 28888 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:07,141 autoreload 15332 9824 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:14,723 autoreload 15332 9824 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:15,284 autoreload 15904 18748 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:17,742 autoreload 15904 18748 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:18,256 autoreload 24736 21516 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:19,673 autoreload 24736 21516 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:20,209 autoreload 1408 33040 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:21,599 autoreload 1408 33040 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:22,104 autoreload 29956 25144 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:25,589 autoreload 29956 25144 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:26,104 autoreload 13660 27404 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:28,533 autoreload 13660 27404 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:29,092 autoreload 9452 16492 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:33,545 autoreload 9452 16492 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 01:13:34,120 autoreload 17204 28688 Watching for file changes with StatReloader
+INFO 2024-06-17 01:13:38,353 basehttp 17204 20788 "GET /prefix/ HTTP/1.1" 200 380
+INFO 2024-06-17 01:13:44,964 basehttp 17204 20788 "GET /prefix/about/ HTTP/1.1" 200 552
