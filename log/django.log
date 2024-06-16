@@ -1,0 +1,44 @@
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2169
+Not Found: /
+"GET / HTTP/1.1" 404 2169
+"GET /prefix/ HTTP/1.1" 200 13
+"GET /prefix/ HTTP/1.1" 200 13
+"GET /prefix/about/ HTTP/1.1" 200 27
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\settings.py changed, reloading.
+INFO 2024-06-17 00:52:29,844 autoreload 28888 29264 Watching for file changes with StatReloader
+INFO 2024-06-17 00:53:02,535 autoreload 28924 32784 Watching for file changes with StatReloader
+WARNING 2024-06-17 00:53:07,245 log 28924 18748 Not Found: /
+WARNING 2024-06-17 00:53:07,246 basehttp 28924 18748 "GET / HTTP/1.1" 404 2169
+WARNING 2024-06-17 00:53:09,570 log 28924 18748 Not Found: /
+WARNING 2024-06-17 00:53:09,571 basehttp 28924 18748 "GET / HTTP/1.1" 404 2169
+INFO 2024-06-17 00:53:15,909 basehttp 28924 18748 "GET /prefix/about/ HTTP/1.1" 200 27
+INFO 2024-06-17 00:53:21,283 basehttp 28924 18748 "GET /prefix/ HTTP/1.1" 200 13
+INFO 2024-06-17 00:56:34,601 autoreload 28924 32784 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-17 00:56:35,172 autoreload 20352 22536 Watching for file changes with StatReloader
