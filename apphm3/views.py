@@ -11,12 +11,12 @@ logger = logging.getLogger(__name__)
 
 def index(request):
     logger.info(f'{request} request received')
-    return render(request, 'ht03app/index.html')
+    return render(request, 'apphm3/index.html')
 
 
 def ht03(request):
     logger.info(f'{request} request received')
-    return render(request, 'ht03app/ht03.html')
+    return render(request, 'apphm3/ht03.html')
 
 
 def customers(request):
@@ -25,7 +25,7 @@ def customers(request):
     context = {'title': 'Customers',
                'name': 'customer_orders',
                'items': customers}
-    return render(request, 'ht03app/items.html', context)
+    return render(request, 'apphm3/items.html', context)
 
 
 def products(request):
@@ -34,7 +34,7 @@ def products(request):
     context = {'title': 'Products',
                'name': 'product_by_id',
                'items': products}
-    return render(request, 'ht03app/items.html', context)
+    return render(request, 'apphm3/items.html', context)
 
 
 def orders(request):
@@ -43,7 +43,7 @@ def orders(request):
     context = {'title': 'Orders',
                'name': 'order_products',
                'items': orders}
-    return render(request, 'ht03app/items.html', context)
+    return render(request, 'apphm3/items.html', context)
 
 
 def order_products(request, order_id):
@@ -53,7 +53,7 @@ def order_products(request, order_id):
                'list': 'Order',
                'items': products,
                'name': 'product_by_id'}
-    return render(request, 'ht03app/item_by_id.html', context)
+    return render(request, 'apphm3/item_by_id.html', context)
 
 
 def customer_orders(request, customer_id):
@@ -63,7 +63,7 @@ def customer_orders(request, customer_id):
                'list': 'Customer',
                'items': orders,
                'name': 'order_products'}
-    return render(request, 'ht03app/item_by_id.html', context)
+    return render(request, 'apphm3/item_by_id.html', context)
 
 
 def product_by_id(request, product_id):
@@ -71,7 +71,7 @@ def product_by_id(request, product_id):
     context = {'title': product.id,
                'list': 'Product',
                'product': product}
-    return render(request, 'ht03app/product_by_id.html', context)
+    return render(request, 'apphm3/product_by_id.html', context)
 
 
 def customer_products(request, customer_id, period=7):

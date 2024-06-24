@@ -1505,3 +1505,51 @@ django.db.utils.OperationalError: no such column: apphm3_product.title
 ERROR 2024-06-24 13:51:39,432 basehttp 5752 15888 "GET /hm3/products/3 HTTP/1.1" 500 138912
 WARNING 2024-06-24 13:51:45,136 log 5752 15888 Not Found: /hm3/products/3/
 WARNING 2024-06-24 13:51:45,136 basehttp 5752 15888 "GET /hm3/products/3/ HTTP/1.1" 404 3977
+INFO 2024-06-24 20:13:24,378 autoreload 18412 6120 Watching for file changes with StatReloader
+INFO 2024-06-24 20:13:27,808 basehttp 18412 11652 "GET / HTTP/1.1" 200 310
+WARNING 2024-06-24 20:13:27,891 log 18412 11652 Not Found: /favicon.ico
+WARNING 2024-06-24 20:13:27,892 basehttp 18412 11652 "GET /favicon.ico HTTP/1.1" 404 2648
+WARNING 2024-06-24 20:13:33,874 log 18412 11652 Not Found: /hm
+WARNING 2024-06-24 20:13:33,875 basehttp 18412 11652 "GET /hm HTTP/1.1" 404 2621
+ERROR 2024-06-24 20:13:40,429 log 18412 11652 Internal Server Error: /hm3/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\myproject\apphm3\views.py", line 19, in ht03
+    return render(request, 'apphm3/ht03.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: apphm3/ht03.html
+ERROR 2024-06-24 20:13:40,434 basehttp 18412 11652 "GET /hm3/ HTTP/1.1" 500 83513
+ERROR 2024-06-24 20:15:52,246 log 18412 11652 Internal Server Error: /hm3/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\myproject\apphm3\views.py", line 19, in ht03
+    return render(request, 'apphm3/ht03.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: apphm3/ht03.html
+ERROR 2024-06-24 20:15:52,251 basehttp 18412 11652 "GET /hm3/ HTTP/1.1" 500 83650
