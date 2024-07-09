@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Apphm3Config(AppConfig):
+class MyappformConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apphm3'
+    name = 'myappform'

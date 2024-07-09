@@ -17,12 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from myapp3.views import index
+from myapp4.views import add_user
+from myappform.views import upload_product_photo
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('prefix/', include('myapp.urls')),
     path('les3/', include('myapp3.urls')),
     path('', index, name='index'),
-    path('hm3/', include('apphm3.urls') ),
     path('les4/', include('myapp4.urls')),
+    path('user/', add_user, name='add_user'),
+    path('image/', upload_product_photo, name='upload_product_photo')
 ]

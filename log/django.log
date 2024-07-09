@@ -1687,3 +1687,849 @@ INFO 2024-06-24 22:23:01,497 autoreload 10136 12588 Watching for file changes wi
 INFO 2024-06-24 22:23:04,887 basehttp 10136 9156 "GET / HTTP/1.1" 200 310
 INFO 2024-06-24 22:23:16,849 basehttp 10136 9156 "GET /les4/user/add/ HTTP/1.1" 200 607
 INFO 2024-06-24 22:23:44,465 basehttp 10136 9156 "GET /hm3/ HTTP/1.1" 200 268
+INFO 2024-06-24 22:26:51,742 autoreload 13104 7236 Watching for file changes with StatReloader
+ERROR 2024-06-24 22:26:53,748 log 13104 9972 Internal Server Error: /hm3/products/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: apphm3_product.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\myproject\apphm3\views.py", line 37, in products
+    return render(request, 'apphm3/items.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\defaulttags.py", line 198, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: apphm3_product.title
+ERROR 2024-06-24 22:26:53,766 basehttp 13104 9972 "GET /hm3/products/ HTTP/1.1" 500 210683
+INFO 2024-06-24 22:26:54,088 basehttp 13104 9972 "GET / HTTP/1.1" 200 310
+WARNING 2024-06-24 22:27:20,869 log 13104 9972 Not Found: /hm3/products//
+WARNING 2024-06-24 22:27:20,869 basehttp 13104 9972 "GET /hm3/products// HTTP/1.1" 404 4079
+ERROR 2024-06-24 22:27:26,599 log 13104 9972 Internal Server Error: /hm3/products/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: apphm3_product.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\myproject\apphm3\views.py", line 37, in products
+    return render(request, 'apphm3/items.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\defaulttags.py", line 198, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: apphm3_product.title
+ERROR 2024-06-24 22:27:26,613 basehttp 13104 9972 "GET /hm3/products/ HTTP/1.1" 500 210671
+ERROR 2024-06-24 22:27:43,934 log 13104 9972 Internal Server Error: /hm3/products/2
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: apphm3_product.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\myproject\apphm3\views.py", line 70, in product_by_id
+    product = get_object_or_404(Product, pk=product_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: apphm3_product.title
+ERROR 2024-06-24 22:27:43,941 basehttp 13104 9972 "GET /hm3/products/2 HTTP/1.1" 500 138953
+INFO 2024-06-24 22:28:03,292 basehttp 13104 9972 "GET /les4/user/add/ HTTP/1.1" 200 607
+INFO 2024-06-24 22:31:30,642 basehttp 13104 9972 "GET /les4/user/add/ HTTP/1.1" 200 825
+INFO 2024-06-24 22:33:32,096 basehttp 13104 9972 "GET /les4/user/add/ HTTP/1.1" 200 824
+INFO 2024-06-24 22:35:24,634 basehttp 13104 9972 "GET /les4/user/add/ HTTP/1.1" 200 825
+INFO 2024-06-24 22:35:54,074 basehttp 13104 9972 "POST /les4/user/add/ HTTP/1.1" 200 892
+INFO 2024-06-24 22:35:56,266 basehttp 13104 9972 "POST /les4/user/add/ HTTP/1.1" 200 892
+INFO 2024-06-24 22:36:06,027 basehttp 13104 9972 "POST /les4/user/add/ HTTP/1.1" 200 892
+INFO 2024-06-24 22:36:06,440 basehttp 13104 9972 "POST /les4/user/add/ HTTP/1.1" 200 892
+INFO 2024-06-24 22:36:06,607 basehttp 13104 9972 "POST /les4/user/add/ HTTP/1.1" 200 892
+INFO 2024-06-24 22:45:55,495 autoreload 13104 7236 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-06-24 22:45:56,079 autoreload 6172 15148 Watching for file changes with StatReloader
+INFO 2024-06-24 22:46:57,216 autoreload 6172 15148 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-06-24 22:46:57,794 autoreload 14264 23032 Watching for file changes with StatReloader
+INFO 2024-06-24 22:47:01,236 autoreload 14264 23032 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-06-24 22:47:01,758 autoreload 14320 4404 Watching for file changes with StatReloader
+INFO 2024-06-24 22:47:04,162 autoreload 14320 4404 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-06-24 22:47:04,692 autoreload 21828 8564 Watching for file changes with StatReloader
+INFO 2024-06-24 22:56:37,957 autoreload 17348 5192 Watching for file changes with StatReloader
+INFO 2024-06-24 22:57:16,360 autoreload 17348 5192 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-06-24 22:57:16,918 autoreload 12632 10948 Watching for file changes with StatReloader
+INFO 2024-06-24 22:57:20,364 basehttp 12632 24824 "GET /les4/forms HTTP/1.1" 301 0
+INFO 2024-06-24 22:57:20,385 basehttp 12632 18004 "GET /les4/forms/ HTTP/1.1" 200 1513
+INFO 2024-06-24 22:58:56,282 basehttp 12632 18004 "POST /les4/forms/ HTTP/1.1" 200 1609
+INFO 2024-06-24 22:58:56,433 basehttp 12632 18004 "POST /les4/forms/ HTTP/1.1" 200 1609
+INFO 2024-06-24 22:58:56,595 basehttp 12632 18004 "POST /les4/forms/ HTTP/1.1" 200 1609
+INFO 2024-06-24 23:03:12,647 autoreload 12632 10948 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-06-24 23:03:13,198 autoreload 15164 19580 Watching for file changes with StatReloader
+INFO 2024-06-24 23:03:20,687 basehttp 15164 8128 "POST /les4/forms/ HTTP/1.1" 200 1609
+INFO 2024-06-24 23:03:41,941 basehttp 15164 8128 "POST /les4/forms/ HTTP/1.1" 200 1609
+INFO 2024-06-24 23:03:49,813 autoreload 15164 19580 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-06-24 23:03:50,455 autoreload 14640 7928 Watching for file changes with StatReloader
+INFO 2024-06-28 11:03:56,731 autoreload 23960 11244 Watching for file changes with StatReloader
+INFO 2024-06-28 11:04:00,223 basehttp 23960 7068 "GET / HTTP/1.1" 200 310
+WARNING 2024-06-28 11:04:00,339 log 23960 7068 Not Found: /favicon.ico
+WARNING 2024-06-28 11:04:00,339 basehttp 23960 7068 "GET /favicon.ico HTTP/1.1" 404 2648
+INFO 2024-06-28 11:04:15,546 basehttp 23960 7068 "GET /les4/forms/ HTTP/1.1" 200 2134
+INFO 2024-06-28 11:05:00,220 basehttp 23960 7068 "POST /les4/forms/ HTTP/1.1" 200 2230
+INFO 2024-06-28 11:05:02,452 basehttp 23960 7068 "POST /les4/forms/ HTTP/1.1" 200 2230
+INFO 2024-07-04 13:27:42,593 autoreload 13784 19588 Watching for file changes with StatReloader
+INFO 2024-07-04 13:27:47,387 basehttp 13784 31068 "GET / HTTP/1.1" 200 310
+WARNING 2024-07-04 13:27:47,474 log 13784 31068 Not Found: /favicon.ico
+WARNING 2024-07-04 13:27:47,474 basehttp 13784 31068 "GET /favicon.ico HTTP/1.1" 404 2648
+WARNING 2024-07-04 13:27:52,038 log 13784 31068 Not Found: /forms
+WARNING 2024-07-04 13:27:52,039 basehttp 13784 31068 "GET /forms HTTP/1.1" 404 2630
+INFO 2024-07-04 13:28:21,053 basehttp 13784 31068 "GET /les4/forms/ HTTP/1.1" 200 2134
+INFO 2024-07-04 13:29:49,862 autoreload 13784 19588 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:29:50,447 autoreload 9908 20036 Watching for file changes with StatReloader
+INFO 2024-07-04 13:29:51,890 autoreload 9908 20036 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:29:52,453 autoreload 29888 15076 Watching for file changes with StatReloader
+INFO 2024-07-04 13:29:53,916 autoreload 29888 15076 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:29:54,533 autoreload 31708 14500 Watching for file changes with StatReloader
+INFO 2024-07-04 13:29:58,037 autoreload 31708 14500 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:29:58,577 autoreload 31516 19020 Watching for file changes with StatReloader
+INFO 2024-07-04 13:30:01,003 autoreload 31516 19020 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:30:01,518 autoreload 9568 24508 Watching for file changes with StatReloader
+INFO 2024-07-04 13:31:20,555 autoreload 9568 24508 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:31:21,553 autoreload 19184 23516 Watching for file changes with StatReloader
+INFO 2024-07-04 13:31:26,571 autoreload 19184 23516 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:31:27,472 autoreload 8892 29516 Watching for file changes with StatReloader
+INFO 2024-07-04 13:31:30,126 autoreload 8892 29516 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:31:31,069 autoreload 30404 22096 Watching for file changes with StatReloader
+INFO 2024-07-04 13:31:36,763 autoreload 30404 22096 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:31:37,507 autoreload 23016 25488 Watching for file changes with StatReloader
+INFO 2024-07-04 13:31:41,195 autoreload 23016 25488 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:31:42,010 autoreload 19084 2232 Watching for file changes with StatReloader
+INFO 2024-07-04 13:31:44,602 autoreload 19084 2232 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:31:45,400 autoreload 5908 8492 Watching for file changes with StatReloader
+INFO 2024-07-04 13:31:48,034 autoreload 5908 8492 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:31:48,775 autoreload 29128 9600 Watching for file changes with StatReloader
+INFO 2024-07-04 13:36:45,845 autoreload 29128 9600 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:36:46,682 autoreload 27716 6104 Watching for file changes with StatReloader
+INFO 2024-07-04 13:37:46,403 basehttp 27716 23780 "POST /les4/forms/ HTTP/1.1" 200 2237
+INFO 2024-07-04 13:37:47,133 basehttp 27716 23780 "POST /les4/forms/ HTTP/1.1" 200 2237
+INFO 2024-07-04 13:42:45,001 autoreload 27716 6104 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:42:45,802 autoreload 9076 23756 Watching for file changes with StatReloader
+INFO 2024-07-04 13:42:48,478 autoreload 9076 23756 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:42:49,250 autoreload 26280 9796 Watching for file changes with StatReloader
+INFO 2024-07-04 13:42:51,797 autoreload 26280 9796 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:42:52,620 autoreload 10364 16648 Watching for file changes with StatReloader
+INFO 2024-07-04 13:42:59,523 autoreload 10364 16648 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:43:00,376 autoreload 7132 2600 Watching for file changes with StatReloader
+INFO 2024-07-04 13:43:03,102 autoreload 7132 2600 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:43:03,892 autoreload 14752 24000 Watching for file changes with StatReloader
+INFO 2024-07-04 13:43:08,403 basehttp 14752 31372 "POST /les4/forms/ HTTP/1.1" 200 2237
+INFO 2024-07-04 13:43:28,388 autoreload 14752 24000 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:43:29,347 autoreload 30952 1432 Watching for file changes with StatReloader
+INFO 2024-07-04 13:43:31,128 basehttp 30952 1252 "POST /les4/forms/ HTTP/1.1" 200 2237
+INFO 2024-07-04 13:44:58,476 autoreload 30952 1432 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:44:59,353 autoreload 23832 21132 Watching for file changes with StatReloader
+INFO 2024-07-04 13:45:02,262 basehttp 23832 25768 "POST /les4/forms/ HTTP/1.1" 200 2237
+INFO 2024-07-04 13:45:32,933 basehttp 23832 25768 "POST /les4/forms/ HTTP/1.1" 200 2237
+INFO 2024-07-04 13:47:25,593 autoreload 23832 21132 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:47:26,466 autoreload 25884 28576 Watching for file changes with StatReloader
+INFO 2024-07-04 13:47:33,447 autoreload 25884 28576 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:47:34,333 autoreload 22372 4856 Watching for file changes with StatReloader
+INFO 2024-07-04 13:47:36,973 autoreload 22372 4856 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:47:37,650 autoreload 13648 21868 Watching for file changes with StatReloader
+INFO 2024-07-04 13:47:43,392 autoreload 13648 21868 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:47:44,179 autoreload 6060 11612 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:06,488 autoreload 6060 11612 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:07,306 autoreload 22908 10108 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:09,862 autoreload 22908 10108 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:10,601 autoreload 30064 8748 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:12,180 autoreload 30064 8748 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:12,936 autoreload 26080 20400 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:15,491 autoreload 26080 20400 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:16,245 autoreload 23052 30068 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:20,829 autoreload 23052 30068 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:21,680 autoreload 25200 3200 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:23,216 autoreload 25200 3200 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:23,892 autoreload 13900 30300 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:26,609 autoreload 13900 30300 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:27,426 autoreload 21200 13248 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:34,416 autoreload 21200 13248 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:35,387 autoreload 9272 28316 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:44,622 autoreload 9272 28316 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:45,573 autoreload 27536 3252 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:49,270 autoreload 27536 3252 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:50,022 autoreload 31648 18520 Watching for file changes with StatReloader
+INFO 2024-07-04 13:57:53,752 autoreload 31648 18520 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:57:54,432 autoreload 28480 26644 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:00,325 autoreload 28480 26644 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:01,237 autoreload 10248 18512 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:02,879 autoreload 10248 18512 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:03,718 autoreload 24156 18728 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:09,692 autoreload 24156 18728 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:10,511 autoreload 11412 13108 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:16,658 autoreload 11412 13108 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:17,786 autoreload 7704 19072 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:26,986 autoreload 7704 19072 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:27,844 autoreload 11436 16440 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:34,007 autoreload 11436 16440 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:34,887 autoreload 10072 29300 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:40,854 autoreload 10072 29300 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:41,649 autoreload 17368 31068 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:43,289 autoreload 17368 31068 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:44,097 autoreload 31320 12620 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:48,922 autoreload 31320 12620 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:49,886 autoreload 10840 30656 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:52,475 autoreload 10840 30656 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:53,168 autoreload 28248 20912 Watching for file changes with StatReloader
+INFO 2024-07-04 13:58:57,939 autoreload 28248 20912 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:58:58,750 autoreload 15756 29060 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:00,432 autoreload 15756 29060 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:01,123 autoreload 26028 12712 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:06,848 autoreload 26028 12712 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:07,797 autoreload 4008 19876 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:10,298 autoreload 4008 19876 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:10,982 autoreload 2748 5524 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:13,576 autoreload 2748 5524 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:14,424 autoreload 19724 4552 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:18,109 autoreload 19724 4552 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:18,881 autoreload 31100 2764 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:21,504 autoreload 31100 2764 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:22,256 autoreload 8936 11436 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:23,764 autoreload 8936 11436 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:24,478 autoreload 11388 12380 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:31,628 autoreload 11388 12380 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:32,446 autoreload 30936 9840 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:35,215 autoreload 30936 9840 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:35,915 autoreload 18848 25532 Watching for file changes with StatReloader
+INFO 2024-07-04 13:59:39,715 autoreload 18848 25532 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 13:59:40,489 autoreload 14832 27316 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:04,728 autoreload 14832 27316 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:05,753 autoreload 29864 3340 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:09,441 autoreload 29864 3340 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:10,255 autoreload 11764 16872 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:12,945 autoreload 11764 16872 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:13,769 autoreload 17624 13108 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:16,513 autoreload 17624 13108 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:17,320 autoreload 8840 26508 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:21,233 autoreload 8840 26508 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:22,141 autoreload 29492 6904 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:31,240 autoreload 29492 6904 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:32,104 autoreload 25540 3564 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:45,820 autoreload 25540 3564 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:46,760 autoreload 24128 25160 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:51,582 autoreload 24128 25160 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:52,350 autoreload 10108 8152 Watching for file changes with StatReloader
+INFO 2024-07-04 14:00:57,104 autoreload 10108 8152 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:00:58,358 autoreload 5852 22696 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:02,264 autoreload 5852 22696 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:03,027 autoreload 12160 15536 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:07,704 autoreload 12160 15536 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:08,517 autoreload 19336 30288 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:12,270 autoreload 19336 30288 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:12,978 autoreload 7644 30572 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:14,586 autoreload 7644 30572 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:15,282 autoreload 7304 9480 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:17,900 autoreload 7304 9480 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:18,774 autoreload 26232 24484 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:21,592 autoreload 26232 24484 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:22,392 autoreload 30552 1620 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:23,961 autoreload 30552 1620 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:24,779 autoreload 7328 6948 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:27,416 autoreload 7328 6948 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:28,133 autoreload 23488 27132 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:29,721 autoreload 23488 27132 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:30,523 autoreload 7516 18224 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:34,288 autoreload 7516 18224 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:35,015 autoreload 15160 16704 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:39,975 autoreload 15160 16704 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:40,936 autoreload 4344 12336 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:45,703 autoreload 4344 12336 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\forms.py changed, reloading.
+INFO 2024-07-04 14:01:46,764 autoreload 22680 30404 Watching for file changes with StatReloader
+INFO 2024-07-04 14:01:49,043 basehttp 22680 18756 "POST /les4/forms/ HTTP/1.1" 200 2237
+INFO 2024-07-04 14:01:55,107 basehttp 22680 18756 "GET /les4/user/add/ HTTP/1.1" 200 825
+INFO 2024-07-04 14:02:01,135 basehttp 22680 18756 "POST /les4/user/add/ HTTP/1.1" 200 891
+INFO 2024-07-04 14:02:01,662 basehttp 22680 18756 "POST /les4/user/add/ HTTP/1.1" 200 891
+INFO 2024-07-04 14:02:01,823 basehttp 22680 18756 "POST /les4/user/add/ HTTP/1.1" 200 891
+INFO 2024-07-04 14:02:02,010 basehttp 22680 18756 "POST /les4/user/add/ HTTP/1.1" 200 891
+INFO 2024-07-04 14:07:44,862 autoreload 22680 30404 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:07:45,719 autoreload 7980 11300 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:00,379 autoreload 7980 11300 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:01,186 autoreload 23352 20368 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:03,641 autoreload 23352 20368 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:04,324 autoreload 6656 1716 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:08,941 autoreload 6656 1716 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:09,760 autoreload 11440 29724 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:11,283 autoreload 11440 29724 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:12,061 autoreload 6996 12792 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:13,495 autoreload 6996 12792 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:14,232 autoreload 19692 24272 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:16,676 autoreload 19692 24272 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:17,400 autoreload 20412 26948 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:21,212 autoreload 20412 26948 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:22,022 autoreload 2712 14408 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:28,896 autoreload 2712 14408 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:29,699 autoreload 23500 27580 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:35,265 autoreload 23500 27580 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:36,168 autoreload 9348 15976 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:37,623 autoreload 9348 15976 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:38,316 autoreload 15652 11820 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:39,859 autoreload 15652 11820 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:40,636 autoreload 9696 11288 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:42,237 autoreload 9696 11288 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:42,930 autoreload 27300 20400 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:45,372 autoreload 27300 20400 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:46,186 autoreload 11180 27468 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:47,618 autoreload 11180 27468 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:48,307 autoreload 18076 15200 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:50,689 autoreload 18076 15200 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:51,446 autoreload 21588 15632 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:56,324 autoreload 21588 15632 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:08:57,109 autoreload 9812 14228 Watching for file changes with StatReloader
+INFO 2024-07-04 14:08:59,551 autoreload 9812 14228 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:00,396 autoreload 19252 18872 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:05,364 autoreload 19252 18872 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:06,246 autoreload 9204 18052 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:07,594 autoreload 9204 18052 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:08,345 autoreload 9924 9272 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:10,915 autoreload 9924 9272 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:11,717 autoreload 30648 16860 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:14,220 autoreload 30648 16860 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:14,885 autoreload 15564 11760 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:18,382 autoreload 15564 11760 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:19,089 autoreload 27536 18032 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:20,484 autoreload 27536 18032 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:21,272 autoreload 596 28612 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:24,813 autoreload 596 28612 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:25,553 autoreload 26832 12220 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:28,153 autoreload 26832 12220 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:28,893 autoreload 4208 16276 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:30,473 autoreload 4208 16276 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:31,248 autoreload 7772 16252 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:32,897 autoreload 7772 16252 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:33,589 autoreload 10980 13500 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:35,158 autoreload 10980 13500 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:35,941 autoreload 22260 15920 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:37,484 autoreload 22260 15920 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:38,260 autoreload 11568 21012 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:46,395 autoreload 11568 21012 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:47,249 autoreload 19536 31584 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:53,155 autoreload 19536 31584 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:54,036 autoreload 11940 27872 Watching for file changes with StatReloader
+INFO 2024-07-04 14:09:55,570 autoreload 11940 27872 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:09:56,328 autoreload 18960 30744 Watching for file changes with StatReloader
+INFO 2024-07-04 14:10:00,100 autoreload 18960 30744 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:10:00,920 autoreload 9964 12908 Watching for file changes with StatReloader
+INFO 2024-07-04 14:10:02,275 autoreload 9964 12908 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\models.py changed, reloading.
+INFO 2024-07-04 14:10:03,000 autoreload 23488 17736 Watching for file changes with StatReloader
+INFO 2024-07-09 19:38:56,815 autoreload 10288 1608 Watching for file changes with StatReloader
+INFO 2024-07-09 19:40:01,870 autoreload 10288 1608 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 19:40:02,446 autoreload 10864 12856 Watching for file changes with StatReloader
+INFO 2024-07-09 19:40:07,959 autoreload 10864 12856 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 19:40:08,511 autoreload 6404 6348 Watching for file changes with StatReloader
+INFO 2024-07-09 19:40:16,119 autoreload 6404 6348 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 19:40:16,660 autoreload 3132 11452 Watching for file changes with StatReloader
+INFO 2024-07-09 19:40:34,018 basehttp 3132 11240 "GET / HTTP/1.1" 200 310
+WARNING 2024-07-09 19:40:34,101 log 3132 11240 Not Found: /favicon.ico
+WARNING 2024-07-09 19:40:34,101 basehttp 3132 11240 "GET /favicon.ico HTTP/1.1" 404 2666
+INFO 2024-07-09 19:40:49,525 basehttp 3132 11240 "GET /les4/user/add/ HTTP/1.1" 200 836
+INFO 2024-07-09 19:42:50,606 basehttp 3132 11240 "POST /les4/user/add/ HTTP/1.1" 200 902
+INFO 2024-07-09 19:42:52,873 basehttp 3132 11240 "POST /les4/user/add/ HTTP/1.1" 200 902
+INFO 2024-07-09 19:42:53,723 basehttp 3132 11240 "POST /les4/user/add/ HTTP/1.1" 200 902
+INFO 2024-07-09 19:42:53,886 basehttp 3132 11240 "POST /les4/user/add/ HTTP/1.1" 200 902
+INFO 2024-07-09 19:43:42,699 basehttp 3132 11240 "POST /les4/user/add/ HTTP/1.1" 200 902
+INFO 2024-07-09 19:43:46,135 basehttp 3132 11240 "POST /les4/user/add/ HTTP/1.1" 200 902
+INFO 2024-07-09 19:43:47,009 basehttp 3132 11240 "POST /les4/user/add/ HTTP/1.1" 200 902
+WARNING 2024-07-09 19:47:00,374 log 3132 11240 Not Found: /les4/user/
+WARNING 2024-07-09 19:47:00,375 basehttp 3132 11240 "GET /les4/user/ HTTP/1.1" 404 2920
+ERROR 2024-07-09 19:47:10,948 log 3132 11240 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 19:47:10,950 basehttp 3132 11240 "GET /user/ HTTP/1.1" 500 67858
+INFO 2024-07-09 19:48:44,537 autoreload 3132 11452 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:48:45,083 autoreload 5872 14648 Watching for file changes with StatReloader
+INFO 2024-07-09 19:48:50,641 autoreload 5872 14648 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:48:51,194 autoreload 10232 11880 Watching for file changes with StatReloader
+INFO 2024-07-09 19:48:54,671 autoreload 10232 11880 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:48:55,172 autoreload 18504 17396 Watching for file changes with StatReloader
+INFO 2024-07-09 19:49:00,653 autoreload 18504 17396 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:49:01,206 autoreload 4476 19256 Watching for file changes with StatReloader
+INFO 2024-07-09 19:49:04,640 autoreload 4476 19256 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:49:05,127 autoreload 7008 2076 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:02,942 autoreload 7008 2076 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:03,475 autoreload 20256 18952 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:05,944 autoreload 20256 18952 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:06,454 autoreload 15196 17440 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:11,985 autoreload 15196 17440 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:12,536 autoreload 16788 1472 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:14,957 autoreload 16788 1472 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:15,544 autoreload 11880 12736 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:18,004 autoreload 11880 12736 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:18,553 autoreload 5116 13408 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:20,989 autoreload 5116 13408 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:21,501 autoreload 9516 17804 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:32,163 autoreload 9516 17804 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:32,728 autoreload 15488 17716 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:38,243 autoreload 15488 17716 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:38,786 autoreload 5400 11252 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:45,312 autoreload 5400 11252 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:45,864 autoreload 15400 10060 Watching for file changes with StatReloader
+INFO 2024-07-09 19:50:48,259 autoreload 15400 10060 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:50:48,775 autoreload 5260 19980 Watching for file changes with StatReloader
+INFO 2024-07-09 19:51:13,847 autoreload 5260 19980 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:51:14,402 autoreload 12836 19356 Watching for file changes with StatReloader
+INFO 2024-07-09 19:51:21,010 autoreload 12836 19356 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:51:21,565 autoreload 16444 18284 Watching for file changes with StatReloader
+INFO 2024-07-09 19:51:23,952 autoreload 16444 18284 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:51:24,449 autoreload 12256 12772 Watching for file changes with StatReloader
+INFO 2024-07-09 19:51:30,988 autoreload 12256 12772 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:51:31,536 autoreload 17436 3108 Watching for file changes with StatReloader
+INFO 2024-07-09 19:54:08,116 autoreload 17436 3108 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:54:08,657 autoreload 10916 11668 Watching for file changes with StatReloader
+INFO 2024-07-09 19:54:13,210 autoreload 10916 11668 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 19:54:13,767 autoreload 11000 9136 Watching for file changes with StatReloader
+INFO 2024-07-09 19:54:16,054 basehttp 11000 14944 "GET /les4/user/add/ HTTP/1.1" 200 836
+ERROR 2024-07-09 19:54:21,099 log 11000 14944 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 19:54:21,103 basehttp 11000 14944 "GET /les4/user/ HTTP/1.1" 500 67903
+INFO 2024-07-09 19:59:00,107 autoreload 11000 9136 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\urls.py changed, reloading.
+INFO 2024-07-09 19:59:00,946 autoreload 1740 14356 Watching for file changes with StatReloader
+ERROR 2024-07-09 19:59:16,031 log 1740 4460 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 19:59:16,033 basehttp 1740 4460 "GET /les4/user/ HTTP/1.1" 500 68040
+ERROR 2024-07-09 19:59:16,803 log 1740 4460 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 19:59:16,806 basehttp 1740 4460 "GET /les4/user/ HTTP/1.1" 500 68040
+ERROR 2024-07-09 19:59:17,761 log 1740 4460 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 19:59:17,767 basehttp 1740 4460 "GET /les4/user/ HTTP/1.1" 500 68040
+INFO 2024-07-09 20:00:06,379 autoreload 1740 14356 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\urls.py changed, reloading.
+INFO 2024-07-09 20:00:07,216 autoreload 19788 2612 Watching for file changes with StatReloader
+INFO 2024-07-09 20:00:08,799 autoreload 19788 2612 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\urls.py changed, reloading.
+INFO 2024-07-09 20:00:09,597 autoreload 14884 15116 Watching for file changes with StatReloader
+ERROR 2024-07-09 20:00:12,759 log 14884 12856 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 20:00:12,763 basehttp 14884 12856 "GET /les4/user/ HTTP/1.1" 500 68040
+ERROR 2024-07-09 20:00:13,403 log 14884 12856 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 20:00:13,406 basehttp 14884 12856 "GET /les4/user/ HTTP/1.1" 500 68040
+ERROR 2024-07-09 20:00:13,721 log 14884 12856 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 20:00:13,723 basehttp 14884 12856 "GET /les4/user/ HTTP/1.1" 500 68040
+INFO 2024-07-09 20:00:40,304 autoreload 14884 15116 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 20:00:41,041 autoreload 16916 16168 Watching for file changes with StatReloader
+ERROR 2024-07-09 20:00:44,214 log 16916 12344 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 20:00:44,217 basehttp 16916 12344 "GET /les4/user/ HTTP/1.1" 500 68040
+ERROR 2024-07-09 20:00:44,912 log 16916 12344 Internal Server Error: /les4/user/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.add_user didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 20:00:44,915 basehttp 16916 12344 "GET /les4/user/ HTTP/1.1" 500 68040
+INFO 2024-07-09 20:03:19,010 autoreload 16916 16168 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 20:03:19,765 autoreload 14680 2024 Watching for file changes with StatReloader
+INFO 2024-07-09 20:03:24,435 autoreload 14680 2024 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 20:03:25,213 autoreload 13156 12228 Watching for file changes with StatReloader
+INFO 2024-07-09 20:03:28,859 autoreload 13156 12228 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 20:03:29,539 autoreload 13328 8680 Watching for file changes with StatReloader
+INFO 2024-07-09 20:03:33,174 autoreload 13328 8680 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 20:03:33,837 autoreload 1388 8144 Watching for file changes with StatReloader
+INFO 2024-07-09 20:06:10,746 autoreload 1388 8144 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 20:06:11,572 autoreload 19544 15540 Watching for file changes with StatReloader
+INFO 2024-07-09 20:06:13,170 autoreload 19544 15540 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 20:06:14,141 autoreload 19796 4228 Watching for file changes with StatReloader
+INFO 2024-07-09 20:06:16,900 basehttp 19796 15632 "GET /les4/user/ HTTP/1.1" 200 865
+INFO 2024-07-09 20:06:23,988 basehttp 19796 15632 "POST /les4/user/ HTTP/1.1" 200 943
+INFO 2024-07-09 20:06:24,811 basehttp 19796 15632 "POST /les4/user/ HTTP/1.1" 200 943
+INFO 2024-07-09 20:15:36,238 basehttp 19796 13340 "POST /les4/user/ HTTP/1.1" 200 944
+INFO 2024-07-09 20:55:28,440 basehttp 19796 11208 "POST /les4/user/ HTTP/1.1" 200 932
+INFO 2024-07-09 20:55:29,939 basehttp 19796 11208 "POST /les4/user/ HTTP/1.1" 200 932
+INFO 2024-07-09 21:00:42,427 autoreload 19796 4228 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\settings.py changed, reloading.
+INFO 2024-07-09 21:00:43,249 autoreload 15540 11556 Watching for file changes with StatReloader
+INFO 2024-07-09 21:00:49,205 autoreload 15540 11556 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\settings.py changed, reloading.
+INFO 2024-07-09 21:00:50,024 autoreload 8760 7200 Watching for file changes with StatReloader
+INFO 2024-07-09 21:01:00,248 autoreload 8760 7200 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\settings.py changed, reloading.
+INFO 2024-07-09 21:11:25,674 autoreload 17164 7584 Watching for file changes with StatReloader
+ERROR 2024-07-09 21:11:28,352 log 17164 19608 Internal Server Error: /les4/upload/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp4.views.upload_image didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-07-09 21:11:28,356 basehttp 17164 19608 "GET /les4/upload/ HTTP/1.1" 500 68175
+INFO 2024-07-09 21:12:54,422 autoreload 17164 7584 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 21:12:55,291 autoreload 20108 17676 Watching for file changes with StatReloader
+INFO 2024-07-09 21:12:57,920 autoreload 20108 17676 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp4\views.py changed, reloading.
+INFO 2024-07-09 21:12:58,727 autoreload 14432 19796 Watching for file changes with StatReloader
+INFO 2024-07-09 21:13:02,439 basehttp 14432 17680 "GET /les4/upload/ HTTP/1.1" 200 660
+INFO 2024-07-09 21:14:05,169 basehttp 14432 17680 "POST /les4/upload/ HTTP/1.1" 200 660
+INFO 2024-07-09 21:46:36,650 autoreload 10984 14956 Watching for file changes with StatReloader
+INFO 2024-07-09 21:46:50,096 autoreload 10984 14956 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 21:46:50,894 autoreload 20016 21456 Watching for file changes with StatReloader
+INFO 2024-07-09 21:46:55,607 autoreload 20016 21456 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 21:46:56,557 autoreload 12152 6904 Watching for file changes with StatReloader
+INFO 2024-07-09 21:47:17,347 autoreload 12152 6904 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 21:47:18,124 autoreload 20624 5724 Watching for file changes with StatReloader
+INFO 2024-07-09 21:47:22,890 autoreload 20624 5724 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 21:47:23,647 autoreload 16568 13148 Watching for file changes with StatReloader
+INFO 2024-07-09 21:47:55,983 autoreload 16568 13148 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 21:47:56,734 autoreload 11668 9012 Watching for file changes with StatReloader
+INFO 2024-07-09 21:48:01,556 autoreload 11668 9012 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 21:48:02,341 autoreload 724 10300 Watching for file changes with StatReloader
+INFO 2024-07-09 21:48:05,993 autoreload 724 10300 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myproject\urls.py changed, reloading.
+INFO 2024-07-09 21:48:06,659 autoreload 16104 15120 Watching for file changes with StatReloader
+INFO 2024-07-09 21:49:34,855 autoreload 592 4992 Watching for file changes with StatReloader
+WARNING 2024-07-09 21:49:37,942 log 592 8920 Not Found: /users/
+WARNING 2024-07-09 21:49:37,943 basehttp 592 8920 "GET /users/ HTTP/1.1" 404 2786
+INFO 2024-07-09 21:49:45,248 basehttp 592 8920 "GET /user/ HTTP/1.1" 200 865
+ERROR 2024-07-09 21:50:10,850 log 592 8920 Internal Server Error: /image/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myappform\views.py", line 13, in upload_product_photo
+    return render(request, 'myappform/upload_product_photo.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myappform/upload_product_photo.html
+ERROR 2024-07-09 21:50:10,859 basehttp 592 8920 "GET /image/ HTTP/1.1" 500 83699
+INFO 2024-07-09 21:52:33,405 autoreload 15536 8436 Watching for file changes with StatReloader
+INFO 2024-07-09 21:52:37,271 basehttp 15536 5940 "GET /image/ HTTP/1.1" 200 651
+ERROR 2024-07-09 21:52:50,695 log 15536 5940 Internal Server Error: /image/
+Traceback (most recent call last):
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myappform\views.py", line 10, in upload_product_photo
+    return redirect('где_то')
+         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\volch\Desktop\djangoFrameWork\project\.venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'где_то' not found. 'где_то' is not a valid view function or pattern name.
+ERROR 2024-07-09 21:52:50,707 basehttp 15536 5940 "POST /image/ HTTP/1.1" 500 86938
