@@ -28,5 +28,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('les4/', include('myapp4.urls')),
     path('user/', add_user, name='add_user'),
-    path('image/', upload_product_photo, name='upload_product_photo')
+    path('image/', upload_product_photo, name='upload_product_photo'),
+    path('__debug__/', include("debug_toolbar.urls")),
+    path('les6/', include('myapp6.urls')),
 ]

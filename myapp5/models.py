@@ -26,5 +26,9 @@ class Product(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     rating = models.DecimalField(default=5.0, max_digits=3,
     decimal_places=2)
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
+
+    @property
+    def total_quantity(self):
+        return sum(product.quantity for product in Product.objects.all())

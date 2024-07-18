@@ -3120,3 +3120,29 @@ INFO 2024-07-14 22:10:12,462 basehttp 24504 8416 "POST /admin/myappadmin/order/a
 INFO 2024-07-14 22:10:12,478 basehttp 24504 8416 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
 INFO 2024-07-14 22:10:50,306 basehttp 24504 8416 "GET /admin/myappadmin/customer/ HTTP/1.1" 200 12626
 INFO 2024-07-14 22:10:50,323 basehttp 24504 8416 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-07-15 22:46:37,814 autoreload 12436 15624 Watching for file changes with StatReloader
+INFO 2024-07-15 22:46:42,005 basehttp 12436 10716 "GET / HTTP/1.1" 200 14281
+INFO 2024-07-15 22:46:42,029 basehttp 12436 10716 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+INFO 2024-07-15 22:46:42,029 basehttp 12436 26528 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+INFO 2024-07-15 22:46:42,045 basehttp 12436 26528 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2024-07-15 22:46:42,077 basehttp 12436 26528 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+WARNING 2024-07-15 22:46:42,184 log 12436 26528 Not Found: /favicon.ico
+WARNING 2024-07-15 22:46:42,184 basehttp 12436 26528 "GET /favicon.ico HTTP/1.1" 404 16871
+INFO 2024-07-15 22:48:10,596 basehttp 12436 26528 "GET /__debug__/render_panel/?store_id=69140724aa374995b9d8fc416c7f783b&panel_id=HistoryPanel HTTP/1.1" 200 4150
+INFO 2024-07-15 22:48:10,607 basehttp 12436 26528 "GET /static/debug_toolbar/js/history.js HTTP/1.1" 200 3515
+INFO 2024-07-15 22:53:55,496 basehttp 12436 15180 "GET / HTTP/1.1" 200 14724
+INFO 2024-07-18 17:38:48,209 autoreload 25436 26140 Watching for file changes with StatReloader
+INFO 2024-07-18 17:40:56,509 autoreload 25436 26140 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp5\__init__.py changed, reloading.
+INFO 2024-07-18 17:40:57,901 autoreload 26680 22476 Watching for file changes with StatReloader
+INFO 2024-07-18 17:41:08,087 autoreload 26680 22476 C:\Users\volch\Desktop\djangoFrameWork\project\myproject\myapp6\urls.py changed, reloading.
+INFO 2024-07-18 17:41:09,103 autoreload 25760 27880 Watching for file changes with StatReloader
+INFO 2024-07-18 17:41:14,476 basehttp 25760 26924 "GET / HTTP/1.1" 200 14724
+INFO 2024-07-18 17:41:14,497 basehttp 25760 27808 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2024-07-18 17:41:14,498 basehttp 25760 26924 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2024-07-18 17:41:14,503 basehttp 25760 27808 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2024-07-18 17:41:14,541 basehttp 25760 27808 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2024-07-18 17:41:14,665 log 25760 27808 Not Found: /favicon.ico
+WARNING 2024-07-18 17:41:14,665 basehttp 25760 27808 "GET /favicon.ico HTTP/1.1" 404 17419
+INFO 2024-07-18 17:42:05,466 basehttp 25760 27808 "GET /les6/db HTTP/1.1" 200 15021
+INFO 2024-07-18 17:42:05,484 basehttp 25760 26924 "GET /static/debug_toolbar/js/redirect.js HTTP/1.1" 200 48
+INFO 2024-07-18 17:42:10,438 basehttp 25760 26924 "GET /les6/db/ HTTP/1.1" 200 14846
